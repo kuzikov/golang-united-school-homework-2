@@ -1,3 +1,3 @@
-module hw2
+module square
 
 go 1.16
