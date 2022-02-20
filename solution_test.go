@@ -16,10 +16,12 @@ func TestCalcSquare(t *testing.T) {
 		{4, 3, 6.928203230275509},
 		// square
 		{5, 4, 25},
+		// wrong case
+		{1, 2, 0},
 	}
 
 	for _, v := range tests {
-		result := CalcSquare(v.sideLen, side(v.sideNum))
+		result := CalcSquare(v.sideLen, Sides(v.sideNum))
 		if result != v.expect {
 			t.Errorf("want:%v, have:%v", v.expect, result)
 		}
